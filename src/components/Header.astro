@@ -1,11 +1,12 @@
 ---
+import Image from "astro/components/Image.astro";
 import AILogo from "../assets/AIZLogo.png";
 ---
 <nav class="navbar sticky-top navbar-expand-lg ">
   <div class="container px-4">
     <!-- <a class="navbar-brand" href="#">AIZero</a> -->
      
-    <img src={AILogo.src} width="200"  alt="AIZero Logo" class="d-inline-block align-text-top">
+    <Image src={AILogo} width={200} alt="AIZero Logo" class="d-inline-block align-text-top" />
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
