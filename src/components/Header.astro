@@ -1,0 +1,70 @@
+---
+import AILogo from "../assets/IMG_5757.png";
+---
+<nav class="navbar sticky-top navbar-expand-lg ">
+  <div class="container px-4">
+    <!-- <a class="navbar-brand" href="#">AIZero</a> -->
+     
+    <img src={AILogo.src} width="200"  alt="AIZero Logo" class="d-inline-block align-text-top">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="/">Home</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="/features">Features</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <div class="d-flex align-items-center">
+            <!-- Main link that navigates to /services -->
+            <a class="nav-link" href="/services">Services</a>
+            
+            <!-- Dropdown toggle button -->
+            <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="visually-hidden">Toggle Dropdown</span>
+            </a>
+            
+            <!-- Dropdown menu -->
+            <ul class="dropdown-menu mt-2" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/services/technology-advisory">Technology Advisory</a></li>
+              <li><a class="dropdown-item" href="#">Technology Delivery</a></li>
+              <li><a class="dropdown-item" href="#">Digital Modernization</a></li>
+              <li><a class="dropdown-item" href="#">Infrastructure Management</a></li>
+              <li><a class="dropdown-item" href="#">Managed IT Services</a></li>
+              <li><a class="dropdown-item" href="#">Cloud Consulting and Migration</a></li>
+            </ul>
+          </div>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    background-color: rgb(255,255,255,0.4); /* Light background color */
+    backdrop-filter: blur(20px); /* Light background color */
+  }
+  .dropdown-toggle-split {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .nav-item.dropdown .d-flex {
+    position: relative;
+  }
+  
+  .dropdown-toggle-split::after {
+    margin-left: 0;
+  }
+  </style>

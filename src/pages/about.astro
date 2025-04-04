@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import HeroImage from "../assets/hero-img.png";
+const HeroDetails = {
+  heroImg: HeroImage,
+  HeroHeading: "Who we Are",
+  HeroText:
+    "We provide innovative solutions to help businesses thrive in the digital age.",
+};
+---
+
+<Layout>
+  <Hero
+    heroImg={HeroDetails.heroImg}
+    HeroHeading={HeroDetails.HeroHeading}
+    HeroText={HeroDetails.HeroText}
+  />
+  <p>About</p>
+  <!-- <Particles /> -->
+</Layout>

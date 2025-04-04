@@ -1,0 +1,27 @@
+---  
+import Picture from "astro/components/Picture.astro";  
+const { imgSrc, imgAlt, text } = Astro.props;  
+---
+
+<div class="item pt-2 pb-4 px-3 col-12 col-sm-6 col-md-4">  <!-- Ensure proper column sizing -->
+  <div class="bg-light onhover on-hover shadow-sm">
+    <div class="p-0 m-0 img-ind-max">
+      <Picture
+        class="card-img-top img-fluid"
+        src={imgSrc}
+        alt={imgAlt}
+        style="max-width: 100%; height: auto; object-fit: cover;" 
+      />
+    </div>
+    <div class="p-4">
+      <h4 class="h5 f-600 p-0 py-2 m-0">
+        <a href="">Security</a>
+      </h4>
+      <p class="p-0 py-2 m-0">
+        {text}
+      </p>
+    </div>
+  </div>
+</div>
+
+

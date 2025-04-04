@@ -1,0 +1,95 @@
+---
+import { Picture } from "astro:assets";
+import Experience from "../assets/Experience.png";
+import Assurance from "../assets/Assurance.png";
+import Satisfied from "../assets/Satisfied.png";
+import Completed from "../assets/Completed.png";
+---
+
+<div class="bg-white py-0 py-sm-5">
+  <div class="container-fluid px-5">
+    <div
+      class="row align-items-center justify-content-around pt-4 pb-0 py-0 pb-sm-0"
+    >
+      <div class="col-sm-6 col-lg-6 col-xl-3 mb-4 col-12">
+        <div class="row mb-5 mb-sm-0 mx-auto">
+          <div class="col-3">
+            <Picture
+              src={Experience}
+              alt="+ YEARS"
+              width="70"
+              height="70"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col">
+            <h2 class="fs-4 fw-600 text-primary p-0 m-0 pb-1 text-start">
+              <span class="counter" data-target="20">20</span>+ YEARS
+            </h2>
+            <span class="fs-5">Experience</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-6 col-xl-3 mb-4 col-12">
+        <div class="row mb-5 mb-sm-0 mx-auto">
+          <div class="col-3">
+            <Picture
+              src={Assurance}
+              alt="% QUALITY"
+              width="70"
+              height="70"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col">
+            <h2 class="fs-4 fw-600 text-primary p-0 m-0 pb-1 text-start">
+              <span class="counter" data-target="100">100</span>% QUALITY
+            </h2>
+            <span class="fs-5">Assurance</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-6 col-xl-3 mb-4 col-12">
+        <div class="row mb-5 mb-sm-0 mx-auto">
+          <div class="col-3">
+            <Picture
+              src={Satisfied}
+              alt="% CLIENT"
+              width="70"
+              height="70"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col">
+            <h2 class="fs-4 fw-600 text-primary p-0 m-0 pb-1 text-start">
+              <span class="counter" data-target="100">100</span>% CLIENT
+            </h2>
+            <span class="fs-5">Satisfaction</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-6 col-xl-3 mb-4 col-12">
+        <div class="row mb-5 mb-sm-0 mx-auto">
+          <div class="col-3">
+            <Picture
+              src={Completed}
+              alt="+ PROJECTS"
+              width="70"
+              height="70"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col">
+            <h2 class="fs-4 fw-600 text-primary p-0 m-0 pb-1 text-start">
+              <span class="counter" data-target="600">600</span>+ PROJECTS
+            </h2>
+            <span class="fs-5">Completed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
