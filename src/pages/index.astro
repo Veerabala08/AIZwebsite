@@ -6,19 +6,23 @@ import Stats from "../components/Stats.astro";
 //Assets
 import HeroImage from '../assets/hero-img.png'; 
 
+
 const HeroDetails = {
   heroImg: HeroImage,
-  HeroHeading: "Empowering Businesses with Cutting-Edge Technology Solutions",
-  HeroText: "We provide innovative solutions to help businesses thrive in the digital age.",
+  HeroHeading: "Your Technology Partner!",
+  HeroText: "Empowering Businesses with Cutting-Edge Technology Solutions. We provide innovative solutions to help businesses thrive in the digital age.",
+  buttonHeading: "Contact Us",
 };
 const cardText = "This is a reusable Astro card component. It can be used to display images and text in a card format. You can customize the image source, alt text, and card text as needed.";
 ---
 
 <Layout>
+  
   <Hero 
-  heroImg={HeroDetails.heroImg}
+  HeroImg={HeroDetails.heroImg}
   HeroHeading={HeroDetails.HeroHeading}
   HeroText={HeroDetails.HeroText}
+  buttonHeading={HeroDetails.buttonHeading}
    />
   <Stats />
 </Layout>

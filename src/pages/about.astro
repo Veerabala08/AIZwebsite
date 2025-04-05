@@ -1,9 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
-import HeroImage from "../assets/hero-img.png";
-const HeroDetails = {
-  heroImg: HeroImage,
+import AboutUsImage from "../assets/feature.png";
+
+const AboutDetails = {
+  heroImg: AboutUsImage,
   HeroHeading: "Who we Are",
   HeroText:
     "We provide innovative solutions to help businesses thrive in the digital age.",
@@ -12,10 +13,23 @@ const HeroDetails = {
 
 <Layout>
   <Hero
-    heroImg={HeroDetails.heroImg}
-    HeroHeading={HeroDetails.HeroHeading}
-    HeroText={HeroDetails.HeroText}
+    HeroImg={AboutDetails.heroImg}
+    HeroHeading={AboutDetails.HeroHeading}
+    HeroText={AboutDetails.HeroText}
   />
-  <p>About</p>
+  <div class="container">
+    <h1>About</h1>
+    <p>
+      Aizero is a Technology Consulting firm focussed on delivering high value to
+      clients through integrated, reliable, responsive and cost effective
+      technology solutions. We hold profound experience and expertise in providing
+      solutions for complex IT implementation projects and integrating emerging
+      technologies in a dynamic environment. Aizero services include a wide range
+      of technology service offerings such as Cloud, Containerization, DevOps,
+      Digital Transformation, Technology Advisory, IT Infrastructure and Managed
+      Services. You can feel free to reach us Thank you.
+    </p>
+  </div>
+  
   <!-- <Particles /> -->
 </Layout>

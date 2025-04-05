@@ -1,50 +1,45 @@
 ---
 import Image from "astro/components/Image.astro";
-import AILogo from "../assets/AIZLogo1.png";
+import AILogo from "../assets/aiz1.png";
+
+// Get current pathname
+const currentPath = Astro.url.pathname;
+
+// Helper function to check if a link is active
+const isActive = (path) => currentPath === path || currentPath.startsWith(path + '/');
 ---
 <nav class="navbar sticky-top navbar-expand-lg ">
   <div class="container px-4">
-    <!-- <a class="navbar-brand" href="#">AIZero</a> -->
-     
-    <Image src={AILogo} width={200} alt="AIZero Logo" class="d-inline-block align-text-top" />
+    <img src={AILogo.src} width={180} alt="AIZero Logo" class="d-inline-block align-text-top" />
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link " aria-current="page" href="/">Home</a>
+          <a class={`nav-link ${isActive('/') ? 'active' : ''}`} aria-current="page" href="/">Home</a>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="/features">Features</a>
-        </li> -->
         <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
+          <a class={`nav-link ${isActive('/about') ? 'active' : ''}`} href="/about">About</a>
         </li>
         <li class="nav-item dropdown">
           <div class="d-flex align-items-center">
-            <!-- Main link that navigates to /services -->
-            <a class="nav-link" href="/services">Services</a>
-            
-            <!-- Dropdown toggle button -->
+            <a class={`nav-link ${isActive('/services') ? 'active' : ''}`} href="/services">Services</a>
             <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <span class="visually-hidden">Toggle Dropdown</span>
             </a>
-            
-            <!-- Dropdown menu -->
             <ul class="dropdown-menu mt-2" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/services/technology-advisory">Technology Advisory</a></li>
-              <li><a class="dropdown-item" href="#">Technology Delivery</a></li>
-              <li><a class="dropdown-item" href="#">Digital Modernization</a></li>
-              <li><a class="dropdown-item" href="#">Infrastructure Management</a></li>
-              <li><a class="dropdown-item" href="#">Managed IT Services</a></li>
-              <li><a class="dropdown-item" href="#">Cloud Consulting and Migration</a></li>
+              <li><a class={`dropdown-item ${isActive('/services/technology-advisory') ? 'active' : ''}`} href="/services/technology-advisory">Technology Advisory</a></li>
+              <li><a class={`dropdown-item ${isActive('/services/digital-modernization') ? 'active' : ''}`}  href="#">Digital Modernization</a></li>
+              <li><a class={`dropdown-item ${isActive('/services/infrastructure-management') ? 'active' : ''}`}  href="#">Infrastructure Management</a></li>
+              <li><a class={`dropdown-item ${isActive('/services/managed-it-services') ? 'active' : ''}`}  href="#">Managed IT Services</a></li>
+              <li><a class={`dropdown-item ${isActive('/services/cloud-consulting-and-migration') ? 'active' : ''}`}  href="#">Cloud Consulting and Migration</a></li>
+              <!-- other dropdown items -->
             </ul>
           </div>
         </li>
-        
         <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
+          <a class={`nav-link ${isActive('/contact') ? 'active' : ''}`} href="/contact">Contact</a>
         </li>
       </ul>
     </div>
@@ -53,19 +48,26 @@ import AILogo from "../assets/AIZLogo1.png";
 
 <style>
   .navbar {
-    background-color: rgb(255,255,255,0.4); /* Light background color */
-    backdrop-filter: blur(20px); /* Light background color */
+    background-color: rgb(255,255,255,0.4);
+    backdrop-filter: blur(20px);
   }
   .dropdown-toggle-split {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
-  
   .nav-item.dropdown .d-flex {
     position: relative;
   }
-  
   .dropdown-toggle-split::after {
     margin-left: 0;
   }
-  </style>
+  /* Active link styling */
+  .nav-link.active {
+    font-weight: bold;
+    color: black !important; /* Bootstrap primary color */
+  }
+  .dropdown-item.active {
+    background-color: #f8f9fa;
+    color: black !important;
+  }
+</style>
